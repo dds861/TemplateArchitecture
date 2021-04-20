@@ -1,2 +1,5 @@
+include ':injection'
+include ':common'
+include ':domain'
+include ':data'
 include ':app'
-rootProject.name = "Movies"
