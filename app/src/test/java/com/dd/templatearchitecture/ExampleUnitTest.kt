@@ -1,4 +1,4 @@
-package com.dd.movies
+package com.dd.templatearchitecture
 
 import org.junit.Test
 import org.junit.Assert.*
