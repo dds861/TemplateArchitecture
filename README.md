@@ -1,1 +1,1 @@
-Movies
+Template for new projects
