@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 data class MovieEntity(
     @ColumnInfo(name = ADULT) val adult: Boolean = false,
     @ColumnInfo(name = BACKDROP_PATH) val backdropPath: String = "",
-    @ColumnInfo(name = GENRE_IDS) val genreIds: List<Int> = listOf(),
+//    @ColumnInfo(name = GENRE_IDS) val genreIds: List<Int> = listOf(),
     @PrimaryKey
     @ColumnInfo(name = ID) val id: Int = 0,
     @ColumnInfo(name = ORIGINAL_LANGUAGE) val originalLanguage: String = "",

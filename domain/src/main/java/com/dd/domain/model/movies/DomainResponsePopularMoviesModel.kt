@@ -1,10 +1,10 @@
-package com.dd.domain.model
+package com.dd.domain.model.movies
 
 import com.dd.domain.DOUBLE_ZERO
 import com.dd.domain.INT_ZERO
 import com.dd.domain.STRING_EMPTY
 
-data class DomainResponsePopularMoviesApi(
+data class DomainResponsePopularMoviesModel(
     val page: Int = INT_ZERO,
     val results: List<Result> = listOf(),
     val totalPages: Int = INT_ZERO,

@@ -15,13 +15,13 @@ interface AppDao {
     @RawQuery(observedEntities = [MovieEntity::class])
     fun getMoviesByQuery(query: SupportSQLiteQuery): PagingSource<Int, MovieEntity>
 
-    @Query("SELECT * FROM MovieEntity.table_name")
+    @Query("SELECT * FROM table_name")
     fun getMoviesByPage(): PagingSource<Int, MovieEntity>
 
-    @Query("SELECT * FROM MovieEntity.table_name")
+    @Query("SELECT * FROM table_name")
     fun getMovies(): Flow<List<MovieEntity>>
 
-    @Query("DELETE FROM MovieEntity.table_name")
+    @Query("DELETE FROM table_name")
     suspend fun deleteMovies()
 
 }

@@ -1,15 +1,22 @@
-package com.dd.domain.model
+package com.dd.domain.model.movies
 
 import com.dd.domain.DOUBLE_ZERO
 import com.dd.domain.INT_ZERO
 import com.dd.domain.STRING_EMPTY
 
-data class DomainResponseTopRatedMoviesApi(
+
+data class DomainResponseUpcomingMoviesModel(
+    val dates: Dates = Dates(),
     val page: Int = INT_ZERO,
     val results: List<Result> = listOf(),
     val totalPages: Int = INT_ZERO,
     val totalResults: Int = INT_ZERO
 ) {
+    data class Dates(
+        val maximum: String = STRING_EMPTY,
+        val minimum: String = STRING_EMPTY
+    )
+
     data class Result(
         val adult: Boolean = false,
         val backdropPath: String = STRING_EMPTY,

@@ -1,11 +1,11 @@
-package com.dd.domain.model
+package com.dd.domain.model.movies
 
 import com.dd.domain.DOUBLE_ZERO
 import com.dd.domain.INT_ZERO
 import com.dd.domain.STRING_EMPTY
 
 
-data class DomainResponseLatestMoviesApi(
+data class DomainResponseLatestMoviesModel(
         val adult: Boolean = false,
         val backdropPath: Any = Any(),
         val belongsToCollection: Any = Any(),
