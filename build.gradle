@@ -39,6 +39,7 @@ buildscript {
     ext.coordinator_layout_version = '1.1.0'
     ext.retrofit_version = '2.9.0'
     ext.ok_http_version = '5.0.0-alpha.2'
+    ext.arch_version = "2.1.0"
 
     repositories {
         google()
