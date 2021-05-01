@@ -16,7 +16,9 @@ android {
         targetSdkVersion cfg.targetSdk
         versionCode cfg.version_code
         versionName cfg.version_name
-
+        buildConfigField("String", "API_KEY", MY_KEY)
+        buildConfigField("String", "BASE_URL_MOVIES", BASE_URL_MOVIES)
+        buildConfigField("String", "BASE_URL_NEWS", BASE_URL_NEWS)
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
