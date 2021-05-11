@@ -2,6 +2,7 @@ package com.dd.injcetion
 
 import android.content.Context
 import androidx.room.Room
+import com.dd.data.BuildConfig.BASE_URL_MOVIES
 import com.dd.data.db.AppDao
 import com.dd.data.db.AppDatabase
 import com.dd.data.net.ApiService
@@ -58,7 +59,7 @@ object AppModule {
     @Provides
     fun getApiService(okHttpClient: OkHttpClient): ApiService {
         return Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(BASE_URL_MOVIES)
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
             .build().create(ApiService::class.java)
