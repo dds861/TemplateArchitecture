@@ -79,6 +79,7 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:$androidx_junit_version"
     // optional - Test helpers for LiveData
     testImplementation "androidx.arch.core:core-testing:$arch_version"
+    testImplementation "com.google.truth:truth:1.1.2"
 
     //Paging Library
     implementation "androidx.paging:paging-runtime-ktx:$paging_version"
