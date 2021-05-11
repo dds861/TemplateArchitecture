@@ -5,8 +5,8 @@ import com.dd.domain.model.news.DomainResponseTopHeadlinesNewsModel
 import com.dd.domain.repository.RepositoryNews
 import com.dd.domain.util.Resource
 
-class GetNewsHeadlinesUseCase(private val repository: RepositoryNews) {
-    suspend fun execute(): Resource<DomainResponseTopHeadlinesNewsModel> {
-        return repository.getNewsHeadlines()
+class GetNewsEverythingUseCase(private val repository: RepositoryNews) {
+    suspend fun execute(): Resource<DomainResponseEverythingNewsModel> {
+        return repository.getNewsEverything()
     }
 }
