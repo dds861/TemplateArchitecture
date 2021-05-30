@@ -16,7 +16,7 @@ interface NewsApiService {
         @Query("page")
         page: Int,
         @Query("apiKey")
-        apiKey: String = BuildConfig.MOVIES_API_KEY
+        apiKey: String = BuildConfig.NEWS_API_KEY
 
     ): Response<DataResponseTopHeadlinesNewsApi>
 
@@ -27,7 +27,7 @@ interface NewsApiService {
         @Query("page")
         page: Int,
         @Query("apiKey")
-        apiKey: String = BuildConfig.MOVIES_API_KEY
+        apiKey: String = BuildConfig.NEWS_API_KEY
     ): Response<DataResponseEverythingNewsApi>
 
 }
