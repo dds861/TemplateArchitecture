@@ -5,7 +5,7 @@ import com.dd.data.STRING_EMPTY
 import com.google.gson.annotations.SerializedName
 
 
-data class DataResponseTopHeadlinesNewsModel(
+data class DataResponseTopHeadlinesNewsApi(
     @SerializedName("status")
     val status: String = STRING_EMPTY,
     @SerializedName("totalResults")
