@@ -6,8 +6,16 @@ import com.dd.domain.util.Resource
 import kotlinx.coroutines.flow.Flow
 
 interface RepositoryNews {
-    suspend fun getNewsHeadlines(): Resource<DomainResponseTopHeadlinesNewsModel>
-    suspend fun getNewsEverything(): Resource<DomainResponseEverythingNewsModel>
+    suspend fun getNewsHeadlines(
+        country: String,
+        page: Int
+    ): Resource<DomainResponseTopHeadlinesNewsModel>
+
+    suspend fun getNewsEverything(
+        country: String,
+        page: Int
+    ): Resource<DomainResponseEverythingNewsModel>
+
     suspend fun getSearchedNews(searchQuery: String): Resource<DomainResponseEverythingNewsModel>
     suspend fun saveNews(article: DomainResponseEverythingNewsModel.Article)
     suspend fun deleteNews(article: DomainResponseEverythingNewsModel.Article)

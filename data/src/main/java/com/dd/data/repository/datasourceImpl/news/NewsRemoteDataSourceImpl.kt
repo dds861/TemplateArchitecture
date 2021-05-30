@@ -7,15 +7,19 @@ import com.dd.data.repository.datasource.news.NewsRemoteDataSource
 import retrofit2.Response
 
 class NewsRemoteDataSourceImpl(
-    private val newsApiService: NewsApiService,
-    private val country: String,
-    private val page: Int
+    private val newsApiService: NewsApiService
 ) : NewsRemoteDataSource {
-    override suspend fun getTopHeadlines(): Response<DataResponseTopHeadlinesNewsApi> {
+    override suspend fun getTopHeadlines(
+        country: String,
+        page: Int
+    ): Response<DataResponseTopHeadlinesNewsApi> {
         return newsApiService.getTopHeadlines(country = country, page = page)
     }
 
-    override suspend fun getNewsEverything(): Response<DataResponseEverythingNewsApi> {
+    override suspend fun getNewsEverything(
+        country: String,
+        page: Int
+    ): Response<DataResponseEverythingNewsApi> {
         return newsApiService.getEverything(country = country, page = page)
     }
 

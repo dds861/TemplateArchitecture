@@ -15,12 +15,28 @@ import javax.inject.Inject
 class RepositoryNews @Inject constructor(
     private val newsRemoteDataSource: NewsRemoteDataSource
 ) : RepositoryNews {
-    override suspend fun getNewsHeadlines(): Resource<DomainResponseTopHeadlinesNewsModel> {
-        return responseToResource(newsRemoteDataSource.getTopHeadlines())
+    override suspend fun getNewsHeadlines(
+        country: String,
+        page: Int
+    ): Resource<DomainResponseTopHeadlinesNewsModel> {
+        return responseToResource(
+            newsRemoteDataSource.getTopHeadlines(
+                country = country,
+                page = page
+            )
+        )
     }
 
-    override suspend fun getNewsEverything(): Resource<DomainResponseEverythingNewsModel> {
-        return responseToResource(newsRemoteDataSource.getNewsEverything())
+    override suspend fun getNewsEverything(
+        country: String,
+        page: Int
+    ): Resource<DomainResponseEverythingNewsModel> {
+        return responseToResource(
+            newsRemoteDataSource.getNewsEverything(
+                country = country,
+                page = page
+            )
+        )
 
     }
 
