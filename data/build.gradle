@@ -75,4 +75,7 @@ dependencies {
     //mock web server
     testImplementation "com.squareup.okhttp3:mockwebserver:$mockwebserver_version"
 
+    //truth testing library
+    testImplementation "com.google.truth:truth:$truth_version"
+
 }
