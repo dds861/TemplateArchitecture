@@ -15,7 +15,7 @@ ext {
 buildscript {
     ext.kotlin_version = "1.4.32"
     ext.core_ktx_version = "1.3.2"
-    ext.gradle_version = "4.1.3"
+    ext.gradle_version = '4.2.1'
     ext.navigation_safe_args_version = "2.3.5"
     ext.hilt_version = '2.33-beta'
     ext.app_compat_version = '1.2.0'
@@ -39,10 +39,13 @@ buildscript {
     ext.coordinator_layout_version = '1.1.0'
     ext.retrofit_version = '2.9.0'
     ext.ok_http_version = '5.0.0-alpha.2'
+    ext.arch_version = "2.1.0"
+    ext.mockwebserver_version = "4.9.1"
+    ext.truth_version = "1.1.3"
 
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$gradle_version"
@@ -58,7 +61,7 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 }
 

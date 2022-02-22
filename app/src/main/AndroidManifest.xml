@@ -2,14 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dd.templatearchitecture">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
+        android:name="com.dd.injection.NewsApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/application_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Templatearchitecture">
-        <activity android:name="com.dd.templatearchitecture.MainActivity">
+        <activity android:name="com.dd.templatearchitecture.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

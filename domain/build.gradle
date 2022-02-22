@@ -12,5 +12,4 @@ dependencies {
     // Kotlin components
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
-    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
 }

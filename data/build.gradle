@@ -16,7 +16,10 @@ android {
         targetSdkVersion cfg.targetSdk
         versionCode cfg.version_code
         versionName cfg.version_name
-
+        buildConfigField("String", "MOVIES_API_KEY", MOVIES_API_KEY)
+        buildConfigField("String", "NEWS_API_KEY", NEWS_API_KEY)
+        buildConfigField("String", "BASE_URL_MOVIES", BASE_URL_MOVIES)
+        buildConfigField("String", "BASE_URL_NEWS", BASE_URL_NEWS)
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -65,4 +68,14 @@ dependencies {
     //dagger-hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-compiler:$hilt_version"
+
+    //Paging Library
+    implementation "androidx.paging:paging-runtime-ktx:$paging_version"
+
+    //mock web server
+    testImplementation "com.squareup.okhttp3:mockwebserver:$mockwebserver_version"
+
+    //truth testing library
+    testImplementation "com.google.truth:truth:$truth_version"
+
 }
