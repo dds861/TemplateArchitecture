@@ -1,4 +1,4 @@
-package com.dd.injcetion
+package com.dd.injection
 
 import android.content.Context
 import androidx.room.Room
@@ -18,9 +18,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
-
-
-
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
@@ -37,13 +34,11 @@ object AppModule {
             .build()
     }
 
-
     @Singleton
     @Provides
     fun getDatabaseDao(appDatabase: AppDatabase): AppDao {
         return appDatabase.templateDao()
     }
-
 
     @Singleton
     @Provides
