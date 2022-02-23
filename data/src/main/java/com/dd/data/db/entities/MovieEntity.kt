@@ -22,9 +22,8 @@ data class MovieEntity(
     @ColumnInfo(name = VOTE_AVERAGE) val voteAverage: Double?,
     @ColumnInfo(name = VOTE_COUNT) val voteCount: Int?
 ) {
-    //////////////////////////TABLE///////////////////////////
     companion object {
-        const val TABLE_NAME = "table_name"
+        const val TABLE_NAME = "movies_table"
         const val ADULT = "adult"
         const val BACKDROP_PATH = "backdrop_path"
         const val GENRE_IDS = "genre_ids"
@@ -40,5 +39,4 @@ data class MovieEntity(
         const val VOTE_AVERAGE = "vote_average"
         const val VOTE_COUNT = "vote_count"
     }
-    //////////////////////////////////////////////////////////
 }

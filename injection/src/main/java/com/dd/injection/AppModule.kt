@@ -3,7 +3,7 @@ package com.dd.injection
 import android.content.Context
 import androidx.room.Room
 import com.dd.data.BuildConfig.BASE_URL_MOVIES
-import com.dd.data.db.AppDao
+import com.dd.data.db.MoviesDao
 import com.dd.data.db.AppDatabase
 import com.dd.data.network.ApiService
 import com.google.gson.GsonBuilder
@@ -21,7 +21,6 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
-
     @Singleton
     @Provides
     fun getAppDatabaseInstance(@ApplicationContext context: Context): AppDatabase {
@@ -36,7 +35,7 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun getDatabaseDao(appDatabase: AppDatabase): AppDao {
+    fun getMoviesDao(appDatabase: AppDatabase): MoviesDao {
         return appDatabase.templateDao()
     }
 

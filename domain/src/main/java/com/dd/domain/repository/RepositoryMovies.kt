@@ -1,6 +1,5 @@
 package com.dd.domain.repository
 
-interface Repository {
-
+interface RepositoryMovies {
     suspend fun getPopularMovies()
 }
