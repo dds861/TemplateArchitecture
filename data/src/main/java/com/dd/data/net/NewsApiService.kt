@@ -1,8 +1,8 @@
 package com.dd.data.net
 
 import com.dd.data.BuildConfig
-import com.dd.data.net.model.news.DataResponseEverythingNewsApi
-import com.dd.data.net.model.news.DataResponseTopHeadlinesNewsApi
+import com.dd.data.net.model.DataResponseEverythingNewsApi
+import com.dd.data.net.model.DataResponseTopHeadlinesNewsApi
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

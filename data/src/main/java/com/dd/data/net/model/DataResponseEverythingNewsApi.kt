@@ -1,4 +1,4 @@
-package com.dd.data.net.model.news
+package com.dd.data.net.model
 import com.dd.data.INT_ZERO
 import com.dd.data.STRING_EMPTY
 import com.google.gson.annotations.SerializedName

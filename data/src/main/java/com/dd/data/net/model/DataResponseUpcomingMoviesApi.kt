@@ -1,4 +1,4 @@
-package com.dd.data.net.model.movies
+package com.dd.data.net.model
 
 import com.dd.data.DOUBLE_ZERO
 import com.dd.data.INT_ZERO
