@@ -6,21 +6,21 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = MovieEntity.TABLE_NAME)
 data class MovieEntity(
-    @ColumnInfo(name = ADULT) val adult: Boolean = false,
-    @ColumnInfo(name = BACKDROP_PATH) val backdropPath: String = "",
+    @ColumnInfo(name = ADULT) val adult: Boolean?,
+    @ColumnInfo(name = BACKDROP_PATH) val backdropPath: String?,
 //    @ColumnInfo(name = GENRE_IDS) val genreIds: List<Int> = listOf(),
-    @PrimaryKey
-    @ColumnInfo(name = ID) val id: Int = 0,
-    @ColumnInfo(name = ORIGINAL_LANGUAGE) val originalLanguage: String = "",
-    @ColumnInfo(name = ORIGINAL_TITLE) val originalTitle: String = "",
-    @ColumnInfo(name = OVERVIEW) val overview: String = "",
-    @ColumnInfo(name = POPULARITY) val popularity: Double = 0.0,
-    @ColumnInfo(name = POSTER_PATH) val posterPath: String = "",
-    @ColumnInfo(name = RELEASE_DATE) val releaseDate: String = "",
-    @ColumnInfo(name = TITLE) val title: String = "",
-    @ColumnInfo(name = VIDEO) val video: Boolean = false,
-    @ColumnInfo(name = VOTE_AVERAGE) val voteAverage: Double = 0.0,
-    @ColumnInfo(name = VOTE_COUNT) val voteCount: Int = 0
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = ID) val id: Int?,
+    @ColumnInfo(name = ORIGINAL_LANGUAGE) val originalLanguage: String?,
+    @ColumnInfo(name = ORIGINAL_TITLE) val originalTitle: String?,
+    @ColumnInfo(name = OVERVIEW) val overview: String?,
+    @ColumnInfo(name = POPULARITY) val popularity: Double?,
+    @ColumnInfo(name = POSTER_PATH) val posterPath: String?,
+    @ColumnInfo(name = RELEASE_DATE) val releaseDate: String?,
+    @ColumnInfo(name = TITLE) val title: String?,
+    @ColumnInfo(name = VIDEO) val video: Boolean?,
+    @ColumnInfo(name = VOTE_AVERAGE) val voteAverage: Double?,
+    @ColumnInfo(name = VOTE_COUNT) val voteCount: Int?
 ) {
     //////////////////////////TABLE///////////////////////////
     companion object {
