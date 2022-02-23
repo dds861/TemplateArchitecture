@@ -11,5 +11,6 @@ import com.dd.data.db.entities.NewsEntity
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun templateDao(): MoviesDao
+    abstract fun moviesDao(): MoviesDao
+    abstract fun newsDao(): NewsDao
 }

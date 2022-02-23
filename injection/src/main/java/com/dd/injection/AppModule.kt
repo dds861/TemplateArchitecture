@@ -5,6 +5,7 @@ import androidx.room.Room
 import com.dd.data.BuildConfig.BASE_URL_MOVIES
 import com.dd.data.db.MoviesDao
 import com.dd.data.db.AppDatabase
+import com.dd.data.db.NewsDao
 import com.dd.data.network.ApiService
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -36,7 +37,13 @@ object AppModule {
     @Singleton
     @Provides
     fun getMoviesDao(appDatabase: AppDatabase): MoviesDao {
-        return appDatabase.templateDao()
+        return appDatabase.moviesDao()
+    }
+
+    @Singleton
+    @Provides
+    fun getNewsDao(appDatabase: AppDatabase): NewsDao {
+        return appDatabase.newsDao()
     }
 
     @Singleton
