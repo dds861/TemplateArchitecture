@@ -1,4 +1,4 @@
-package com.dd.data.repository.datasource.news
+package com.dd.data.repository.datasource
 
 import com.dd.data.net.model.news.DataResponseEverythingNewsApi
 import com.dd.data.net.model.news.DataResponseTopHeadlinesNewsApi

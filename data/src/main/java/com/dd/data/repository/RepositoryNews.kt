@@ -2,7 +2,7 @@ package com.dd.data.repository
 
 import com.dd.data.net.model.news.DataResponseEverythingNewsApi
 import com.dd.data.net.model.news.DataResponseTopHeadlinesNewsApi
-import com.dd.data.repository.datasource.news.NewsRemoteDataSource
+import com.dd.data.repository.datasource.NewsRemoteDataSource
 import com.dd.data.utils.toDomainModel
 import com.dd.domain.model.news.DomainResponseEverythingNewsModel
 import com.dd.domain.model.news.DomainResponseTopHeadlinesNewsModel
