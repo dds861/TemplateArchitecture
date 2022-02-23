@@ -3,9 +3,9 @@
 ext {
     configuration = [
             buildToolsVersion: "30.0.3",
-            compileVersion   : 30,
+            compileVersion   : 31,
             minSdk           : 21,
-            targetSdk        : 30,
+            targetSdk        : 31,
             version_code     : 1,
             version_name     : "1.0.0"
     ]
