@@ -3,7 +3,9 @@ package com.dd.domain.model.news
 import com.dd.domain.INT_ZERO
 import com.dd.domain.STRING_EMPTY
 
-data class DomainResponseTopHeadlinesNewsModel(
+
+data class DomainResponseNewsEverythingModel(
+
     val status: String = STRING_EMPTY,
     val totalResults: Int = INT_ZERO,
     val articles: List<Article> = listOf()

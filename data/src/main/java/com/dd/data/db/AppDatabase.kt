@@ -2,6 +2,8 @@ package com.dd.data.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import com.dd.data.db.dao.MoviesDao
+import com.dd.data.db.dao.NewsDao
 import com.dd.data.db.entities.MovieEntity
 import com.dd.data.db.entities.NewsEntity
 

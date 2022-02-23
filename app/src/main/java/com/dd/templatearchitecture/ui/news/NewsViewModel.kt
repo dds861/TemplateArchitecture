@@ -8,7 +8,7 @@ import android.os.Build
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.dd.domain.model.news.DomainResponseTopHeadlinesNewsModel
+import com.dd.domain.model.news.DomainResponseNewsTopHeadlinesModel
 import com.dd.domain.usecases.news.GetNewsHeadlinesUseCase
 import com.dd.domain.util.Resource
 import kotlinx.coroutines.Dispatchers
@@ -20,7 +20,7 @@ class NewsViewModel(
 ) :
     AndroidViewModel(app) {
 
-    val newsHeadLines: MutableLiveData<Resource<DomainResponseTopHeadlinesNewsModel>> =
+    val newsHeadLines: MutableLiveData<Resource<DomainResponseNewsTopHeadlinesModel>> =
         MutableLiveData()
 
     fun getNewsHeadlines(country: String, page: Int) {

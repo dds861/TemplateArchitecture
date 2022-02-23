@@ -1,11 +1,10 @@
 package com.dd.data.network.model
-
 import com.dd.data.INT_ZERO
 import com.dd.data.STRING_EMPTY
 import com.google.gson.annotations.SerializedName
 
 
-data class DataResponseTopHeadlinesNewsApi(
+data class DataResponseNewsEverythingApi(
     @SerializedName("status")
     val status: String = STRING_EMPTY,
     @SerializedName("totalResults")

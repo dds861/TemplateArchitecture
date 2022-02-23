@@ -6,9 +6,7 @@ import com.dd.data.STRING_EMPTY
 import com.google.gson.annotations.SerializedName
 
 
-data class DataResponseUpcomingMoviesApi(
-    @SerializedName("dates")
-    val dates: Dates = Dates(),
+data class DataResponseMoviesPopularApi(
     @SerializedName("page")
     val page: Int = INT_ZERO,
     @SerializedName("results")
@@ -18,13 +16,6 @@ data class DataResponseUpcomingMoviesApi(
     @SerializedName("total_results")
     val totalResults: Int = INT_ZERO
 ) {
-    data class Dates(
-        @SerializedName("maximum")
-        val maximum: String = STRING_EMPTY,
-        @SerializedName("minimum")
-        val minimum: String = STRING_EMPTY
-    )
-
     data class Result(
         @SerializedName("adult")
         val adult: Boolean = false,

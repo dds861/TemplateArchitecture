@@ -1,20 +1,20 @@
 package com.dd.data.utils
 
-import com.dd.data.network.model.DataResponseEverythingNewsApi
-import com.dd.data.network.model.DataResponseTopHeadlinesNewsApi
-import com.dd.domain.model.news.DomainResponseEverythingNewsModel
-import com.dd.domain.model.news.DomainResponseTopHeadlinesNewsModel
+import com.dd.data.network.model.DataResponseNewsEverythingApi
+import com.dd.data.network.model.DataResponseNewsTopHeadlinesApi
+import com.dd.domain.model.news.DomainResponseNewsEverythingModel
+import com.dd.domain.model.news.DomainResponseNewsTopHeadlinesModel
 
-fun DataResponseTopHeadlinesNewsApi.toDomainModel(): DomainResponseTopHeadlinesNewsModel =
-    DomainResponseTopHeadlinesNewsModel(
+fun DataResponseNewsTopHeadlinesApi.toDomainModel(): DomainResponseNewsTopHeadlinesModel =
+    DomainResponseNewsTopHeadlinesModel(
         status = status,
         totalResults = totalResults,
         articles = articles.map { it.toDomainModel() }
     )
 
 
-fun DataResponseTopHeadlinesNewsApi.Article.toDomainModel(): DomainResponseTopHeadlinesNewsModel.Article =
-    DomainResponseTopHeadlinesNewsModel.Article(
+fun DataResponseNewsTopHeadlinesApi.Article.toDomainModel(): DomainResponseNewsTopHeadlinesModel.Article =
+    DomainResponseNewsTopHeadlinesModel.Article(
         source = source.toDomainModel(),
         author = author,
         title = title,
@@ -25,22 +25,22 @@ fun DataResponseTopHeadlinesNewsApi.Article.toDomainModel(): DomainResponseTopHe
         content = content
     )
 
-fun DataResponseTopHeadlinesNewsApi.Article.Source.toDomainModel(): DomainResponseTopHeadlinesNewsModel.Article.Source =
-    DomainResponseTopHeadlinesNewsModel.Article.Source(
+fun DataResponseNewsTopHeadlinesApi.Article.Source.toDomainModel(): DomainResponseNewsTopHeadlinesModel.Article.Source =
+    DomainResponseNewsTopHeadlinesModel.Article.Source(
         id = id,
         name = name
     )
 
 
-fun DataResponseEverythingNewsApi.toDomainModel(): DomainResponseEverythingNewsModel =
-    DomainResponseEverythingNewsModel(
+fun DataResponseNewsEverythingApi.toDomainModel(): DomainResponseNewsEverythingModel =
+    DomainResponseNewsEverythingModel(
         status = status,
         totalResults = totalResults,
         articles = articles.map { it.toDomainModel() }
     )
 
-fun DataResponseEverythingNewsApi.Article.toDomainModel(): DomainResponseEverythingNewsModel.Article =
-    DomainResponseEverythingNewsModel.Article(
+fun DataResponseNewsEverythingApi.Article.toDomainModel(): DomainResponseNewsEverythingModel.Article =
+    DomainResponseNewsEverythingModel.Article(
         source = source.toDomainModel(),
         author = author,
         title = title,
@@ -52,8 +52,8 @@ fun DataResponseEverythingNewsApi.Article.toDomainModel(): DomainResponseEveryth
 
     )
 
-fun DataResponseEverythingNewsApi.Article.Source.toDomainModel(): DomainResponseEverythingNewsModel.Article.Source =
-    DomainResponseEverythingNewsModel.Article.Source(
+fun DataResponseNewsEverythingApi.Article.Source.toDomainModel(): DomainResponseNewsEverythingModel.Article.Source =
+    DomainResponseNewsEverythingModel.Article.Source(
         id = id,
         name = name
     )

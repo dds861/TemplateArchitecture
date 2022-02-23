@@ -6,7 +6,7 @@ import com.dd.data.STRING_EMPTY
 import com.google.gson.annotations.SerializedName
 
 
-data class DataResponseLatestMoviesApi(
+data class DataResponseMoviesLatestApi(
     @SerializedName("adult")
     val adult: Boolean = false,
     @SerializedName("backdrop_path")

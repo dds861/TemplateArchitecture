@@ -1,11 +1,11 @@
 package com.dd.data.repository
 
-import com.dd.data.network.model.DataResponseEverythingNewsApi
-import com.dd.data.network.model.DataResponseTopHeadlinesNewsApi
+import com.dd.data.network.model.DataResponseNewsEverythingApi
+import com.dd.data.network.model.DataResponseNewsTopHeadlinesApi
 import com.dd.data.repository.datasource.NewsRemoteDataSource
 import com.dd.data.utils.toDomainModel
-import com.dd.domain.model.news.DomainResponseEverythingNewsModel
-import com.dd.domain.model.news.DomainResponseTopHeadlinesNewsModel
+import com.dd.domain.model.news.DomainResponseNewsEverythingModel
+import com.dd.domain.model.news.DomainResponseNewsTopHeadlinesModel
 import com.dd.domain.repository.RepositoryNews
 import com.dd.domain.util.Resource
 import kotlinx.coroutines.flow.Flow
@@ -18,7 +18,7 @@ class RepositoryNews @Inject constructor(
     override suspend fun getNewsHeadlines(
         country: String,
         page: Int
-    ): Resource<DomainResponseTopHeadlinesNewsModel> {
+    ): Resource<DomainResponseNewsTopHeadlinesModel> {
         return responseToResource(
             newsRemoteDataSource.getTopHeadlines(
                 country = country,
@@ -30,7 +30,7 @@ class RepositoryNews @Inject constructor(
     override suspend fun getNewsEverything(
         country: String,
         page: Int
-    ): Resource<DomainResponseEverythingNewsModel> {
+    ): Resource<DomainResponseNewsEverythingModel> {
         return responseToResource(
             newsRemoteDataSource.getNewsEverything(
                 country = country,
@@ -40,19 +40,19 @@ class RepositoryNews @Inject constructor(
 
     }
 
-    override suspend fun getSearchedNews(searchQuery: String): Resource<DomainResponseEverythingNewsModel> {
+    override suspend fun getSearchedNews(searchQuery: String): Resource<DomainResponseNewsEverythingModel> {
         TODO("Not yet implemented")
     }
 
-    override suspend fun saveNews(article: DomainResponseEverythingNewsModel.Article) {
+    override suspend fun saveNews(article: DomainResponseNewsEverythingModel.Article) {
         TODO("Not yet implemented")
     }
 
-    override suspend fun deleteNews(article: DomainResponseEverythingNewsModel.Article) {
+    override suspend fun deleteNews(article: DomainResponseNewsEverythingModel.Article) {
         TODO("Not yet implemented")
     }
 
-    override fun getSavedNews(): Flow<List<DomainResponseEverythingNewsModel.Article>> {
+    override fun getSavedNews(): Flow<List<DomainResponseNewsEverythingModel.Article>> {
         TODO("Not yet implemented")
     }
 
@@ -61,8 +61,8 @@ class RepositoryNews @Inject constructor(
         if (response.isSuccessful) {
             response.body()?.let { result ->
                 return when (result) {
-                    is DataResponseTopHeadlinesNewsApi -> Resource.Success(result.toDomainModel()) as Resource<T>
-                    is DataResponseEverythingNewsApi -> Resource.Success(result.toDomainModel()) as Resource<T>
+                    is DataResponseNewsTopHeadlinesApi -> Resource.Success(result.toDomainModel()) as Resource<T>
+                    is DataResponseNewsEverythingApi -> Resource.Success(result.toDomainModel()) as Resource<T>
                     else -> throw Exception()
                 }
 

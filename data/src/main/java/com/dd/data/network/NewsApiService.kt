@@ -1,8 +1,8 @@
 package com.dd.data.network
 
 import com.dd.data.BuildConfig
-import com.dd.data.network.model.DataResponseEverythingNewsApi
-import com.dd.data.network.model.DataResponseTopHeadlinesNewsApi
+import com.dd.data.network.model.DataResponseNewsEverythingApi
+import com.dd.data.network.model.DataResponseNewsTopHeadlinesApi
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -18,7 +18,7 @@ interface NewsApiService {
         @Query("apiKey")
         apiKey: String = BuildConfig.NEWS_API_KEY
 
-    ): Response<DataResponseTopHeadlinesNewsApi>
+    ): Response<DataResponseNewsTopHeadlinesApi>
 
     @GET("v2/everything")
     suspend fun getEverything(
@@ -28,6 +28,6 @@ interface NewsApiService {
         page: Int,
         @Query("apiKey")
         apiKey: String = BuildConfig.NEWS_API_KEY
-    ): Response<DataResponseEverythingNewsApi>
+    ): Response<DataResponseNewsEverythingApi>
 
 }

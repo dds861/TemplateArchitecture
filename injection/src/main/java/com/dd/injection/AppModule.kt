@@ -3,9 +3,9 @@ package com.dd.injection
 import android.content.Context
 import androidx.room.Room
 import com.dd.data.BuildConfig.BASE_URL_MOVIES
-import com.dd.data.db.MoviesDao
+import com.dd.data.db.dao.MoviesDao
 import com.dd.data.db.AppDatabase
-import com.dd.data.db.NewsDao
+import com.dd.data.db.dao.NewsDao
 import com.dd.data.network.ApiService
 import com.google.gson.GsonBuilder
 import dagger.Module

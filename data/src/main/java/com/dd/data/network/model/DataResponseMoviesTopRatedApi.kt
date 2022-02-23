@@ -6,7 +6,7 @@ import com.dd.data.STRING_EMPTY
 import com.google.gson.annotations.SerializedName
 
 
-data class DataResponseTopRatedMoviesApi(
+data class DataResponseMoviesTopRatedApi(
     @SerializedName("page")
     val page: Int = INT_ZERO,
     @SerializedName("results")

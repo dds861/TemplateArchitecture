@@ -1,6 +1,6 @@
 package com.dd.data.network
 
-import com.dd.data.network.model.DataResponsePopularMoviesApi
+import com.dd.data.network.model.DataResponseMoviesPopularApi
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -11,25 +11,25 @@ interface ApiService {
         @Query("api_key") api_key: String,
         @Query("language") language: String,
         @Query("page") page: Int,
-    ): DataResponsePopularMoviesApi
+    ): DataResponseMoviesPopularApi
 
     @GET("3/movie/top_rated")
     suspend fun getTopRatedMovies(
         @Query("api_key") api_key: String,
         @Query("language") language: String,
         @Query("page") page: Int,
-    ): DataResponsePopularMoviesApi
+    ): DataResponseMoviesPopularApi
 
     @GET("3/movie/upcoming")
     suspend fun getUpcomingMovies(
         @Query("api_key") api_key: String,
         @Query("language") language: String,
         @Query("page") page: Int,
-    ): DataResponsePopularMoviesApi
+    ): DataResponseMoviesPopularApi
 
     @GET("3/movie/latest")
     suspend fun getLatestMovies(
         @Query("api_key") api_key: String,
         @Query("language") language: String
-    ): DataResponsePopularMoviesApi
+    ): DataResponseMoviesPopularApi
 }

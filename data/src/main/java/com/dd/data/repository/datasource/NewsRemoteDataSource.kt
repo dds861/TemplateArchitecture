@@ -1,19 +1,19 @@
 package com.dd.data.repository.datasource
 
-import com.dd.data.network.model.DataResponseEverythingNewsApi
-import com.dd.data.network.model.DataResponseTopHeadlinesNewsApi
+import com.dd.data.network.model.DataResponseNewsEverythingApi
+import com.dd.data.network.model.DataResponseNewsTopHeadlinesApi
 import retrofit2.Response
 
 interface NewsRemoteDataSource {
     suspend fun getTopHeadlines(
         country: String,
         page: Int
-    ): Response<DataResponseTopHeadlinesNewsApi>
+    ): Response<DataResponseNewsTopHeadlinesApi>
 
     suspend fun getNewsEverything(
         country: String,
         page: Int
-    ): Response<DataResponseEverythingNewsApi>
+    ): Response<DataResponseNewsEverythingApi>
 //    suspend fun getSearchedNews(): Response<DataResponseTopHeadlinesNewsApi>
 //    suspend fun saveNews(): Response<DataResponseTopHeadlinesNewsApi>
 //    suspend fun deleteNews(): Response<DataResponseTopHeadlinesNewsApi>
