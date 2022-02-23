@@ -5,7 +5,7 @@ import androidx.room.Room
 import com.dd.data.BuildConfig.BASE_URL_MOVIES
 import com.dd.data.db.AppDao
 import com.dd.data.db.AppDatabase
-import com.dd.data.net.ApiService
+import com.dd.data.network.ApiService
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides

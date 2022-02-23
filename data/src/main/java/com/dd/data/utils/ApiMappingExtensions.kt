@@ -1,7 +1,7 @@
 package com.dd.data.utils
 
-import com.dd.data.net.model.DataResponseEverythingNewsApi
-import com.dd.data.net.model.DataResponseTopHeadlinesNewsApi
+import com.dd.data.network.model.DataResponseEverythingNewsApi
+import com.dd.data.network.model.DataResponseTopHeadlinesNewsApi
 import com.dd.domain.model.news.DomainResponseEverythingNewsModel
 import com.dd.domain.model.news.DomainResponseTopHeadlinesNewsModel
 

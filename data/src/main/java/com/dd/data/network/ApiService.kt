@@ -1,6 +1,6 @@
-package com.dd.data.net
+package com.dd.data.network
 
-import com.dd.data.net.model.DataResponsePopularMoviesApi
+import com.dd.data.network.model.DataResponsePopularMoviesApi
 import retrofit2.http.GET
 import retrofit2.http.Query
 

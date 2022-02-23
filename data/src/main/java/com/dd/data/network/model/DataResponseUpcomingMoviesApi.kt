@@ -1,4 +1,4 @@
-package com.dd.data.net.model
+package com.dd.data.network.model
 
 import com.dd.data.DOUBLE_ZERO
 import com.dd.data.INT_ZERO
@@ -6,7 +6,9 @@ import com.dd.data.STRING_EMPTY
 import com.google.gson.annotations.SerializedName
 
 
-data class DataResponsePopularMoviesApi(
+data class DataResponseUpcomingMoviesApi(
+    @SerializedName("dates")
+    val dates: Dates = Dates(),
     @SerializedName("page")
     val page: Int = INT_ZERO,
     @SerializedName("results")
@@ -16,6 +18,13 @@ data class DataResponsePopularMoviesApi(
     @SerializedName("total_results")
     val totalResults: Int = INT_ZERO
 ) {
+    data class Dates(
+        @SerializedName("maximum")
+        val maximum: String = STRING_EMPTY,
+        @SerializedName("minimum")
+        val minimum: String = STRING_EMPTY
+    )
+
     data class Result(
         @SerializedName("adult")
         val adult: Boolean = false,

@@ -1,4 +1,4 @@
-package com.dd.data.net.model
+package com.dd.data.network.model
 
 import com.dd.data.DOUBLE_ZERO
 import com.dd.data.INT_ZERO

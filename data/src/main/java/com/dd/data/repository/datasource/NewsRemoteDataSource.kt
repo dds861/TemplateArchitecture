@@ -1,7 +1,7 @@
 package com.dd.data.repository.datasource
 
-import com.dd.data.net.model.DataResponseEverythingNewsApi
-import com.dd.data.net.model.DataResponseTopHeadlinesNewsApi
+import com.dd.data.network.model.DataResponseEverythingNewsApi
+import com.dd.data.network.model.DataResponseTopHeadlinesNewsApi
 import retrofit2.Response
 
 interface NewsRemoteDataSource {

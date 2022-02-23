@@ -1,4 +1,4 @@
-package com.dd.data.net
+package com.dd.data.network
 
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
